@@ -31,6 +31,26 @@ header>a{min-height:42px!important;padding:0 14px!important;font-size:13px!impor
 a[href="#kaise"]{display:inline-block;padding-block:12px}
 a{color:#111111}a:hover{color:#D7362A}
 summary{cursor:pointer}
+
+/* Mobile first screen: the question, the joke and the one action. The answer and the explanation follow just below. */
+.sticky-cta{display:none}
+@media (max-width:600px){
+  .hdr-cta,.hero-kaise,.m-hide{display:none!important}
+  .hero-col{gap:18px!important}
+  .hero-col>span:first-child{font-size:12px!important;padding:6px 10px!important}
+  .hero-ctas{order:3}
+  .hero-meta{order:4;margin-top:-4px!important;font-size:14px!important}
+  .hero-ans{order:5;margin-top:30px!important}
+  .hero-desc{order:6;font-size:17px!important}
+  .hero-btn{width:100%;justify-content:center;box-sizing:border-box;padding:0 14px!important;font-size:17px!important;text-align:center;white-space:nowrap}
+  .hero-meta{font-size:13px!important}
+  .sticky-cta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:20;background:#FFC72C;border-top:3px solid #111111;
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));transform:translateY(110%);transition:transform .25s ease}
+  .sticky-cta.show{transform:none}
+  .sticky-cta a{font-family:'Archivo',system-ui,sans-serif;display:flex;align-items:center;justify-content:center;min-height:52px;background:#111111;color:#FFFFFF;
+    font-weight:800;font-size:17px;text-decoration:none;border:3px solid #111111;box-shadow:4px 4px 0 #D7362A}
+}
+@media (prefers-reduced-motion:reduce){.sticky-cta{transition:none}}
 </style>
 </head>
 <body>
@@ -40,23 +60,23 @@ summary{cursor:pointer}
 <p aria-hidden="true" style="position: absolute; right: -40px; bottom: -60px; margin: 0; font-family: 'Yatra One', serif; font-size: 260px; line-height: 1; color: #111111; opacity: 0.07; white-space: nowrap;">आज क्या बनाना है?</p>
 <header style="position: relative; max-width: 1160px; margin: 0 auto; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
 <span style="display: inline-flex; align-items: center; gap: 12px;"><span style="font-size: 40px; font-weight: 900; font-stretch: 75%; letter-spacing: -1px;">oki</span><span style="background: #111111; color: #FFC72C; font-weight: 800; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 9px; border: 2px solid #111111;">Early beta</span></span>
-<a href="https://wa.me/910000000000?text=Oki%20waitlist" style="display: inline-flex; align-items: center; min-height: 46px; padding: 0 22px; border: 3px solid #111111; border-radius: 999px; background: #111111; color: #FFC72C; font-weight: 800; font-size: 15px; text-decoration: none;">Join waitlist</a>
+<a class="hdr-cta" href="https://wa.me/910000000000?text=Oki%20waitlist" style="display: inline-flex; align-items: center; min-height: 46px; padding: 0 22px; border: 3px solid #111111; border-radius: 999px; background: #111111; color: #FFC72C; font-weight: 800; font-size: 15px; text-decoration: none;">Join waitlist</a>
 </header>
 <div style="position: relative; max-width: 1160px; margin: 0 auto; padding: 24px 24px 88px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
-<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 26px;">
+<div class="hero-col" style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 26px;">
 <span style="align-self: flex-start; transform: rotate(-3deg); background: #D7362A; color: #FFFFFF; font-weight: 800; font-size: 15px; letter-spacing: 1px; text-transform: uppercase; padding: 8px 14px; border: 3px solid #111111;">Roz. Teen baar.</span>
 <h1 style="margin: 0; font-weight: 900; font-stretch: 72%; font-size: clamp(64px, 10vw, 136px); line-height: 0.9; letter-spacing: -2px; text-transform: uppercase;">Didi, aaj kya banana hai<span style="color: #D7362A;">?</span></h1>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px;">
 <p style="margin: 0; background: #FFFFFF; border: 3px solid #111111; border-radius: 18px 18px 18px 4px; padding: 12px 20px; font-size: 22px; font-weight: 700; box-shadow: 5px 5px 0 #111111;">“Kuch bhi bana do.”</p>
 <p style="margin: 0; font-size: 19px; font-weight: 600;">…and it’s aloo-gobhi. Again.</p>
 </div>
-<p style="margin: 0; font-size: clamp(26px, 3vw, 36px); font-weight: 900; font-stretch: 85%; line-height: 1.1;">Ab jawab ek hi hai: oki.</p>
-<p style="margin: 0; font-size: 19px; max-width: 540px;">Every evening, Oki calls your cook, checks the kitchen, plans tomorrow’s meals and orders only what’s missing. You tap OK on WhatsApp. That’s it.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: center;">
-<a href="https://wa.me/910000000000?text=Oki%20waitlist" style="display: inline-flex; align-items: center; min-height: 58px; padding: 0 30px; border: 3px solid #111111; background: #111111; color: #FFFFFF; font-weight: 800; font-size: 18px; text-decoration: none; box-shadow: 6px 6px 0 #D7362A;">Join the waitlist on WhatsApp</a>
-<a href="#kaise" style="font-weight: 800; font-size: 16px; text-decoration: underline; text-underline-offset: 4px;">Kaise kaam karta hai?</a>
+<p class="hero-ans" style="margin: 0; font-size: clamp(26px, 3vw, 36px); font-weight: 900; font-stretch: 85%; line-height: 1.1;">Ab jawab ek hi hai: oki.</p>
+<p class="hero-desc" style="margin: 0; font-size: 19px; max-width: 540px;">Every evening, Oki calls your cook, checks the kitchen, plans tomorrow’s meals and orders only what’s missing. You tap OK on WhatsApp. That’s it.</p>
+<div class="hero-ctas" style="display: flex; flex-wrap: wrap; gap: 18px; align-items: center;">
+<a class="hero-btn" href="https://wa.me/910000000000?text=Oki%20waitlist" style="display: inline-flex; align-items: center; min-height: 58px; padding: 0 30px; border: 3px solid #111111; background: #111111; color: #FFFFFF; font-weight: 800; font-size: 18px; text-decoration: none; box-shadow: 6px 6px 0 #D7362A;">Join the waitlist on WhatsApp</a>
+<a class="hero-kaise" href="#kaise" style="font-weight: 800; font-size: 16px; text-decoration: underline; text-underline-offset: 4px;">Kaise kaam karta hai?</a>
 </div>
-<p style="margin: 0; font-size: 15px; font-weight: 600;">Early beta · Sirf 10 ghar · Pehla mahina free · Koi app nahi</p>
+<p class="hero-meta" style="margin: 0; font-size: 15px; font-weight: 600;">Early beta · Sirf 10 ghar · Pehla mahina free<span class="m-hide"> · Koi app nahi</span></p>
 </div>
 
 <div style="flex: 0 1 320px; min-width: 280px; display: flex; justify-content: center;">
@@ -301,7 +321,7 @@ summary{cursor:pointer}
 </div>
 </section>
 
-<section style="background: #FFC72C; border-top: 4px solid #111111; position: relative; overflow: hidden;">
+<section class="last-cta" style="background: #FFC72C; border-top: 4px solid #111111; position: relative; overflow: hidden;">
 <p aria-hidden="true" style="position: absolute; left: -20px; top: -40px; margin: 0; font-family: 'Yatra One', serif; font-size: 220px; line-height: 1; color: #111111; opacity: 0.07; white-space: nowrap;">अब जवाब एक ही है</p>
 <div style="position: relative; max-width: 1160px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; align-items: flex-start; gap: 24px;">
 <h2 style="margin: 0; font-weight: 900; font-stretch: 72%; font-size: clamp(52px, 8vw, 112px); line-height: 0.9; text-transform: uppercase; letter-spacing: -2px;">Ab yeh sawaal Oki ka hai.</h2>
@@ -313,6 +333,19 @@ summary{cursor:pointer}
 <footer style="max-width: 1160px; margin: 0 auto; padding: 28px 24px 40px; font-size: 14px; font-weight: 600;">oki · Made in Purva Palm Beach, Bengaluru</footer>
 
 </div>
+<div class="sticky-cta" id="sticky-cta" aria-hidden="true"><a href="https://wa.me/910000000000?text=Oki%20waitlist" tabindex="-1">Join the waitlist on WhatsApp</a></div>
+<script>
+/* Show the WhatsApp bar once the main button has scrolled away; hide it again at the final call to action. */
+(function () {
+  var bar = document.getElementById("sticky-cta"), btn = document.querySelector(".hero-btn"), last = document.querySelector(".last-cta");
+  if (!bar || !btn || !("IntersectionObserver" in window)) return;
+  var heroGone = false, lastIn = false;
+  function update() { var on = heroGone && !lastIn; bar.classList.toggle("show", on); bar.setAttribute("aria-hidden", on ? "false" : "true");
+                      bar.querySelector("a").tabIndex = on ? 0 : -1; }
+  new IntersectionObserver(function (e) { heroGone = !e[0].isIntersecting && e[0].boundingClientRect.top < 0; update(); }).observe(btn);
+  new IntersectionObserver(function (e) { lastIn = e[0].isIntersecting; update(); }).observe(last);
+})();
+</script>
 <script>
 /* Source tracking without cookies: ?src=flyer or ?src=group is added to the pre-typed WhatsApp text,
    so Oki can count where each conversation started. */
